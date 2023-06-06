@@ -1,0 +1,16 @@
+sources:
+- name: policies
+  data:
+  - git::github.com/enterprise-contract/ec-policies.git//data?ref=bca7d72
+  policy:
+  - git::github.com/enterprise-contract/ec-policies.git//policy/lib?ref=bca7d72
+  - git::github.com/enterprise-contract/ec-policies.git//policy/release?ref=bca7d72
+configuration:
+  include:
+  - slsa_source_version_controlled
+publicKey: |
+  -----BEGIN PUBLIC KEY-----
+  MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZP/0htjhVt2y0ohjgtIIgICOtQtA
+  naYJRuLprwIv6FDhZ5yFjYUEtsmoNcW7rx2KM6FOXGsCX3BNc7qhHELT+g==
+  -----END PUBLIC KEY-----
+rekorUrl: ""
