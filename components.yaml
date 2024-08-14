@@ -1,0 +1,4 @@
+components:
+  - containerImage: quay.io/konflux-ci/ec-golden-image@sha256:ff5e80b8a616385abba8dccf200e1b215dd0ec9af760144018e49cf279632be1
+  - containerImage: quay.io/konflux-ci/ec-golden-image@sha256:8c9a4a1f08270edddfd187f387d0b7c4abd8dddc2ee5d09633965e79c2c3ccab
+  - containerImage: quay.io/konflux-ci/ec-golden-image@sha256:fa2ea24582304c076bce859b17cfd59d456809888505c613ac91eb8d0ad38f9a

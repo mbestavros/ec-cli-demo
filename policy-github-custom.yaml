@@ -1,0 +1,27 @@
+---
+identity:
+  subjectRegExp: >-
+    https:\/\/github\.com\/(slsa-framework\/slsa-github-generator|lcarva\/festoji)\/
+  issuer: https://token.actions.githubusercontent.com
+
+sources:
+  - policy:
+      - github.com/enterprise-contract/ec-policies//policy/lib
+      - github.com/enterprise-contract/ec-policies//policy/release
+    ruleData:
+      allowed_gh_workflow_repos:
+        - lcarva/festoji
+      allowed_gh_workflow_refs:
+        - refs/heads/master
+      allowed_gh_workflow_names:
+        - Package
+      allowed_gh_workflow_triggers:
+        - push
+  # A new policy source group uses the custom policy rules.
+  - policy:
+    - github.com/lcarva/festoji-policies//policies
+
+configuration:
+  include:
+    - github_certificate
+    - github_slsa_provenance  # Also specify which custom policy rule to include.
